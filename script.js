@@ -10,4 +10,12 @@ var main = function() {
    $('#todo').val("");
     return false;
   });
-  
+   $(document).on("click", '.glyphicon-star', function() {
+    $(this).toggleClass('active');
+  });
+  $(document).on("click", '.glyphicon-remove', function() {
+    $(this).parent().remove();
+  });
+};
+
+$(document).ready(main);
