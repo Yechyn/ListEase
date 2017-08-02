@@ -16,6 +16,26 @@ var main = function() {
   $(document).on("click", '.glyphicon-remove', function() {
     $(this).parent().remove();
   });
+
+
+
+
+   
+     if (annyang) {
+  var commands = {
+           'add *item': add,
+           };};
+           var add = function(item) {
+       var html = template(item);
+       $('.list').append(html);
+     };
+   
+     
+     
+  annyang.addCommands(commands);
+  annyang.start();
 };
+
+
 
 $(document).ready(main);
